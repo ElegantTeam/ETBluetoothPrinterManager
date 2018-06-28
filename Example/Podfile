@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'ETBluetoothPrinterManager_Example' do
   pod 'ETBluetoothPrinterManager', :path => '../'
-
-  target 'ETBluetoothPrinterManager_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

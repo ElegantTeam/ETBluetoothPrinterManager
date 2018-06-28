@@ -1,0 +1,27 @@
+{
+  "name": "ETBluetoothPrinterManager",
+  "version": "0.1.0",
+  "summary": "A library for Bluetooth Device connecting in iOS.It‘s very easy to use!!!",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/VolleyZ/ETBluetoothPrinterManager",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "VolleyZ": "552408690@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/VolleyZ/ETBluetoothPrinterManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ETBluetoothPrinterManager/Classes/**/*",
+  "dependencies": {
+    "MBProgressHUD": [
+
+    ]
+  }
+}

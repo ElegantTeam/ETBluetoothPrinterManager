@@ -1,0 +1,23 @@
+PODS:
+  - ETBluetoothPrinterManager (0.1.0):
+    - MBProgressHUD
+  - MBProgressHUD (1.1.0)
+
+DEPENDENCIES:
+  - ETBluetoothPrinterManager (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
+
+EXTERNAL SOURCES:
+  ETBluetoothPrinterManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ETBluetoothPrinterManager: d7d99d4840d197f98f04ae6558600cd5633b8515
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+
+PODFILE CHECKSUM: 726291937f0925f39291c040ee02eb32ac8f91e9
+
+COCOAPODS: 1.5.3
