@@ -1,6 +1,5 @@
 //
 //  CBPeripheral+MacAddress.m
-//  Inventory
 //
 //  Created by volley on 2018/5/14.
 //  Copyright © 2018年 Elegant Team. All rights reserved.

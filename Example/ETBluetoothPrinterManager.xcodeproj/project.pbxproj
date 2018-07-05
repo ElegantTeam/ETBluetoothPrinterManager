@@ -17,6 +17,7 @@
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		882ED0E520ECB4B600242C28 /* ETBeginPrintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882ED0E420ECB4B600242C28 /* ETBeginPrintController.m */; };
 		887772B520E4C92600522A47 /* ETBluetoothPrinterManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887772B420E4C92600522A47 /* ETBluetoothPrinterManager.framework */; };
 		887772B720E4C94500522A47 /* Pods_ETBluetoothPrinterManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887772B620E4C94500522A47 /* Pods_ETBluetoothPrinterManager_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		882ED0E320ECB4B600242C28 /* ETBeginPrintController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETBeginPrintController.h; sourceTree = "<group>"; };
+		882ED0E420ECB4B600242C28 /* ETBeginPrintController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETBeginPrintController.m; sourceTree = "<group>"; };
 		887772B420E4C92600522A47 /* ETBluetoothPrinterManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ETBluetoothPrinterManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887772B620E4C94500522A47 /* Pods_ETBluetoothPrinterManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ETBluetoothPrinterManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA8FBCE2A9300191D9B81DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -111,11 +114,8 @@
 			children = (
 				6003F59C195388D20070C39A /* ETAppDelegate.h */,
 				6003F59D195388D20070C39A /* ETAppDelegate.m */,
+				882ED0E620ECB77400242C28 /* Controllers */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* ETViewController.h */,
-				6003F5A6195388D20070C39A /* ETViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for ETBluetoothPrinterManager";
@@ -126,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				6003F595195388D20070C39A /* ETBluetoothPrinterManager-Info.plist */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* ETBluetoothPrinterManager-Prefix.pch */,
 			);
@@ -141,6 +143,17 @@
 				A2E287D3F041DEC3AB62EDC3 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		882ED0E620ECB77400242C28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5A5195388D20070C39A /* ETViewController.h */,
+				6003F5A6195388D20070C39A /* ETViewController.m */,
+				882ED0E320ECB4B600242C28 /* ETBeginPrintController.h */,
+				882ED0E420ECB4B600242C28 /* ETBeginPrintController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* ETAppDelegate.m in Sources */,
+				882ED0E520ECB4B600242C28 /* ETBeginPrintController.m in Sources */,
 				6003F5A7195388D20070C39A /* ETViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -396,7 +410,7 @@
 				INFOPLIST_FILE = "ETBluetoothPrinterManager/ETBluetoothPrinterManager-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = org.test.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,7 +427,7 @@
 				INFOPLIST_FILE = "ETBluetoothPrinterManager/ETBluetoothPrinterManager-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = org.test.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

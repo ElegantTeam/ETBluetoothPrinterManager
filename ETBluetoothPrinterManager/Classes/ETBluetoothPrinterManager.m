@@ -1,6 +1,5 @@
 //
-//  ETBluetoothCentralManage.m
-//  CoreBlueToothDemo
+//  ETBluetoothPrinterManager.m
 //
 //  Created by volley on 2018/4/13.
 //  Copyright © 2018年 Elegant Team. All rights reserved.
@@ -117,6 +116,7 @@ static ETBluetoothPrinterManager *manage = nil;
     [self.centralManager connectPeripheral:peripheral options:option];
     
     self.connectTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(connectTimeOut) userInfo:nil repeats:NO];
+    [[NSRunLoop mainRunLoop] addTimer:self.connectTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)disconnectPeripheral {
@@ -196,8 +196,7 @@ static ETBluetoothPrinterManager *manage = nil;
 #pragma mark - helper method
 - (NSMutableArray *)recentConnectedPeriplerals:(NSArray *)peripherals {
     
-    NSString *filePath = [kCachePath stringByAppendingPathComponent:@"peripherals.plist"];
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:[self filePath]];
     
     NSMutableArray *recent = [NSMutableArray array];
     for (CBPeripheral *peripheral in peripherals) {
@@ -219,11 +218,10 @@ static ETBluetoothPrinterManager *manage = nil;
         [_connectedHUD hideAnimated:NO];
         
         self.isPowerOn = NO;
-        if ([self.delegate respondsToSelector:@selector(bluetoothHasPowerOff)]) {
-            [self.delegate bluetoothHasPowerOff];
-        }
     }
-    
+    if ([self.delegate respondsToSelector:@selector(bluetoothStatusHasChange:)]) {
+        [self.delegate bluetoothStatusHasChange:self.isPowerOn];
+    }
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
@@ -232,7 +230,6 @@ static ETBluetoothPrinterManager *manage = nil;
     if (mac_data) {
         peripheral.mac_addr = [self convertToMacAddressWithData:mac_data];
     }
-    
     
     // 不可连接的过滤掉
     if (![advertisementData[CBAdvertisementDataIsConnectable] boolValue]) {
@@ -382,8 +379,7 @@ static ETBluetoothPrinterManager *manage = nil;
 }
 
 - (void)writeConnectedPeripheral:(CBPeripheral *)peripheral {
-    
-    NSString *filePath = [kCachePath stringByAppendingPathComponent:@"peripherals.plist"];
+    NSString *filePath = [self filePath];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     
     if (dict == nil) {
@@ -427,6 +423,10 @@ static ETBluetoothPrinterManager *manage = nil;
         _filterPrefix = @"Gprinter";
     }
     return _filterPrefix;
+}
+
+- (NSString *)filePath {
+    return [kCachePath stringByAppendingPathComponent:@"peripherals.plist"];
 }
 
 #pragma mark - mac address

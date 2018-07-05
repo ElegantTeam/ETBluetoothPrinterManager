@@ -1,6 +1,5 @@
 //
-//  ETBluetoothCentralManage.h
-//  CoreBlueToothDemo
+//  ETBluetoothPrinterManager.h
 //
 //  Created by volley on 2018/4/13.
 //  Copyright © 2018年 Elegant Team. All rights reserved.
@@ -19,7 +18,7 @@
 
 - (void)writeValueSuccess;
 
-- (void)bluetoothHasPowerOff;
+- (void)bluetoothStatusHasChange:(BOOL)isOn;
 
 - (void)didFailConnectPeripheral;
 
@@ -31,7 +30,7 @@
 
 @property (nonatomic, assign) BOOL isPowerOn;  // 蓝牙是否可用
 
-@property (nonatomic, copy) NSString *filterPrefix;  // 过滤的打印机前缀
+@property (nonatomic, copy) NSString *filterPrefix;  // key（通常用打印机前缀），可以用来获取最近连接的设备
 
 @property (nonatomic, weak) id<ETBluetoothManagerDelegate> delegate;
 

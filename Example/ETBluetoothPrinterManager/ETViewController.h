@@ -8,6 +8,17 @@
 
 @import UIKit;
 
+/*
+ 80mm 150mm， 要是还要其他尺寸要自己加。基本支持所有类型的打印机。
+ */
+typedef NS_ENUM(NSUInteger, ETPrintSettingType) {
+    ETPrintSettingType_80 = 80,
+    ETPrintSettingType_150 = 150,
+};
+
 @interface ETViewController : UIViewController
 
+@property (nonatomic, copy) NSString *secTitle;
+
+@property (nonatomic, strong) NSArray *peripherals;
 @end

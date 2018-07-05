@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4sX-kJ-12d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--蓝牙连接与打印-->
         <scene sceneID="wQg-tq-qST">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="ETViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ETViewController" id="whP-gf-Uak" customClass="ETViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
@@ -20,12 +20,154 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIy-lB-jUD">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.42759267769999998" green="0.70998008580000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cDa-TT-hDY"/>
+                                </constraints>
+                                <state key="normal" title="使用最近连接设备打印"/>
+                                <connections>
+                                    <action selector="useRecentPerpheralPrint:" destination="whP-gf-Uak" eventType="touchUpInside" id="gs1-Rq-01k"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VEq-gI-k0B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="systemCell" textLabel="QF9-n4-LGA" detailTextLabel="NeY-iw-Oe6" style="IBUITableViewCellStyleSubtitle" id="Dkb-nb-54a">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dkb-nb-54a" id="0zM-5C-NVe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QF9-n4-LGA">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NeY-iw-Oe6">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="whP-gf-Uak" id="0xE-Hq-J7V"/>
+                                    <outlet property="delegate" destination="whP-gf-Uak" id="L6T-Io-KJr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VEq-gI-k0B" secondAttribute="trailing" id="7yT-0q-AGR"/>
+                            <constraint firstItem="VEq-gI-k0B" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="8e3-X8-LB5"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="lIy-lB-jUD" secondAttribute="bottom" id="I7K-Cv-s4D"/>
+                            <constraint firstItem="lIy-lB-jUD" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="Lvn-Ec-f23"/>
+                            <constraint firstAttribute="trailing" secondItem="lIy-lB-jUD" secondAttribute="trailing" id="YBS-Vj-QsV"/>
+                            <constraint firstItem="VEq-gI-k0B" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="shs-4P-0BI"/>
+                            <constraint firstItem="lIy-lB-jUD" firstAttribute="top" secondItem="VEq-gI-k0B" secondAttribute="bottom" id="wNF-Vm-jrf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="蓝牙连接与打印" id="27Y-qb-kB6">
+                        <barButtonItem key="leftBarButtonItem" title="80mm" id="Hcb-uF-t36">
+                            <connections>
+                                <action selector="selectSizeAction:" destination="whP-gf-Uak" id="C4x-b6-c4K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="筛选" id="FXb-FL-bPB">
+                            <connections>
+                                <action selector="filterPeripheralAction:" destination="whP-gf-Uak" id="n4h-Dj-7MC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftItem" destination="Hcb-uF-t36" id="bIU-zL-tPO"/>
+                        <outlet property="printBtn" destination="lIy-lB-jUD" id="xT8-Fe-6MX"/>
+                        <outlet property="tableView" destination="VEq-gI-k0B" id="jOy-OK-qYz"/>
+                        <segue destination="Xng-I6-Bvs" kind="show" id="eNw-FK-6eX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="1244" y="432.23388305847078"/>
+        </scene>
+        <!--打印-->
+        <scene sceneID="o6p-0d-zQs">
+            <objects>
+                <viewController storyboardIdentifier="ETBeginPrintController" id="Xng-I6-Bvs" customClass="ETBeginPrintController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wjf-Ty-Vui"/>
+                        <viewControllerLayoutGuide type="bottom" id="TUL-St-rR8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6aS-5G-RfB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtQ-oG-6R3">
+                                <rect key="frame" x="159.5" y="114" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LP9-7e-P99">
+                                <rect key="frame" x="40" y="311.5" width="295" height="44"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.65490196079999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9ZN-Kp-AFy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="马上使用此打印机打印"/>
+                                <connections>
+                                    <action selector="printAction:" destination="Xng-I6-Bvs" eventType="touchUpInside" id="Fwu-Hl-vAc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LP9-7e-P99" firstAttribute="centerY" secondItem="6aS-5G-RfB" secondAttribute="centerY" id="9bM-Vd-lSF"/>
+                            <constraint firstItem="LP9-7e-P99" firstAttribute="leading" secondItem="6aS-5G-RfB" secondAttribute="leading" constant="40" id="EdH-kW-CLV"/>
+                            <constraint firstItem="rtQ-oG-6R3" firstAttribute="centerX" secondItem="6aS-5G-RfB" secondAttribute="centerX" id="HoL-8k-aE6"/>
+                            <constraint firstItem="LP9-7e-P99" firstAttribute="centerX" secondItem="6aS-5G-RfB" secondAttribute="centerX" id="UEg-IT-2Mh"/>
+                            <constraint firstAttribute="trailing" secondItem="LP9-7e-P99" secondAttribute="trailing" constant="40" id="Yjl-8Q-LT3"/>
+                            <constraint firstItem="rtQ-oG-6R3" firstAttribute="top" secondItem="Wjf-Ty-Vui" secondAttribute="bottom" constant="50" id="eT5-0S-Ro0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="打印" id="nJ0-ie-ReB"/>
+                    <connections>
+                        <outlet property="printerNameLabel" destination="rtQ-oG-6R3" id="due-gO-UmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FM7-Zq-KuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984.8" y="429.53523238380814"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qzw-6w-LCs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4sX-kJ-12d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cjd-cf-GQI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="n4x-i6-Rdr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6NA-bp-VDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>
