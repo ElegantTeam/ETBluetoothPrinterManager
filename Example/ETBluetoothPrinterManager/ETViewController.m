@@ -110,7 +110,15 @@ static NSString *cellIdentifier = @"systemCell";
 
 - (void)didConnectPeripheral {
     //打印test
-    NSData *data = [@"testtesttesttesttesttest" dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableData *mutData = [NSMutableData data];
+    NSString *print_text = @"testtesttesttesttesttest";
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSData *data = [print_text dataUsingEncoding:enc];
+    [mutData appendData:data];
+    
+    Byte nextRowBytes[] = {0x0A};
+    [mutData appendBytes:nextRowBytes length:sizeof(nextRowBytes)];
+    
     [self.manager writePrintData:data];
 }
 

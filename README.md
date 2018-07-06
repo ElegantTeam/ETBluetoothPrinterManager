@@ -1,15 +1,34 @@
 # ETBluetoothPrinterManager
 
-[![CI Status](https://img.shields.io/travis/volley/ETBluetoothPrinterManager.svg?style=flat)](https://travis-ci.org/volley/ETBluetoothPrinterManager)
-[![Version](https://img.shields.io/cocoapods/v/ETBluetoothPrinterManager.svg?style=flat)](https://cocoapods.org/pods/ETBluetoothPrinterManager)
-[![License](https://img.shields.io/cocoapods/l/ETBluetoothPrinterManager.svg?style=flat)](https://cocoapods.org/pods/ETBluetoothPrinterManager)
-[![Platform](https://img.shields.io/cocoapods/p/ETBluetoothPrinterManager.svg?style=flat)](https://cocoapods.org/pods/ETBluetoothPrinterManager)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+##Usage
+1.At first, create manager instance.
+```
+self.manager = [ETBluetoothPrinterManager shareInstance];
+```
+2.Begin scan Peripheral use `[self.manager scanPeripherals];` after creating instance 
+or
+implement the proxy in **viewWillAppear** and scan in **bluetoothStatusHasChange**.
+```
+self.manager.delegate = self;
+```
+
+###Delegate
+```
+- (void)bluetoothStatusHasChange:(BOOL)isOn;
+- (void)didDiscoverPeripherals:(NSArray *)peripherals;
+- (void)didConnectPeripheral;
+- (void)writeValueSuccess;
+- (void)didFailConnectPeripheral;
+```
+###Recent Peripherals
+You can get the recent paired peripherals in the discovered Peripherals of filtering through filtering.
+```
+self.pairedDevices = [self.manager recentConnectedPeriplerals:filters];
+```
 
 ## Installation
 
@@ -20,9 +39,9 @@ it, simply add the following line to your Podfile:
 pod 'ETBluetoothPrinterManager'
 ```
 
-## Author
-
-volley, 552408690@qq.com
+## Requirements
+·iOS 9.0+
+·Objective-C
 
 ## License
 

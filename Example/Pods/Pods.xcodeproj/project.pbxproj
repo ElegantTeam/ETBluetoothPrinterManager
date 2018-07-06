@@ -56,29 +56,29 @@
 /* Begin PBXFileReference section */
 		003FC7AF144EB5F591B8894C5D5A95A9 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		06EDC4312A72114942CB08A8A9644C20 /* Pods-ETBluetoothPrinterManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ETBluetoothPrinterManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		0BC4E933E88A9A784703D3A70A844792 /* ETBluetoothPrinterManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ETBluetoothPrinterManager.framework; path = ETBluetoothPrinterManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC4E933E88A9A784703D3A70A844792 /* ETBluetoothPrinterManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETBluetoothPrinterManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F16CB7A1F93EA63362E3B8C5400E9B /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8A216A31F0D7077CEF3CDF9D72AFD6 /* Pods-ETBluetoothPrinterManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ETBluetoothPrinterManager_Example.modulemap"; sourceTree = "<group>"; };
 		3058B74BFEF3CFDE0675CAA12804E349 /* Pods-ETBluetoothPrinterManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ETBluetoothPrinterManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3B2DD9526B5154B1BEE3C4925CBD89FB /* MBProgressHUD+ETTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+ETTool.h"; path = "ETBluetoothPrinterManager/Classes/MBProgressHUD+ETTool.h"; sourceTree = "<group>"; };
 		45D2DF972BFA021BAC584C6537B0D05A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		469A9B51BDABF9C8037841B4D4B6E421 /* Pods_ETBluetoothPrinterManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ETBluetoothPrinterManager_Example.framework; path = "Pods-ETBluetoothPrinterManager_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		469A9B51BDABF9C8037841B4D4B6E421 /* Pods_ETBluetoothPrinterManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETBluetoothPrinterManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4893E76CE14F53F03D749E388FF8D363 /* ETBluetoothPrinterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ETBluetoothPrinterManager.m; path = ETBluetoothPrinterManager/Classes/ETBluetoothPrinterManager.m; sourceTree = "<group>"; };
 		49587FD0999FDC84C9FA4DC9DDEB873B /* ETBluetoothPrinterManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ETBluetoothPrinterManager.xcconfig; sourceTree = "<group>"; };
 		4B1F153F8E2A2003EAC926AA5B11227D /* ETBluetoothPrinterManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ETBluetoothPrinterManager.modulemap; sourceTree = "<group>"; };
 		58F1514FA22C9BCE1A9716CF00A451BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5EDE7983FEA78C1828CD2024B76CFDF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		60016F08527CD5CC80594326C854697D /* ETBluetoothPrinterManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ETBluetoothPrinterManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		60016F08527CD5CC80594326C854697D /* ETBluetoothPrinterManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ETBluetoothPrinterManager.podspec; sourceTree = "<group>"; };
 		63B107C93461127D400549FD709D6471 /* MBProgressHUD+ETTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+ETTool.m"; path = "ETBluetoothPrinterManager/Classes/MBProgressHUD+ETTool.m"; sourceTree = "<group>"; };
 		655AE369D9F0E72BB8942500D1BE9BCE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66891D7444FD1F3F0CD26F9AA4FEAE8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		66891D7444FD1F3F0CD26F9AA4FEAE8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		671DCA055BB0B400F93579F957B71929 /* ETBluetoothPrinterManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ETBluetoothPrinterManager-dummy.m"; sourceTree = "<group>"; };
 		70ED90B39697713401047024DE11C7FC /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		7524D7C9E147E7F0F69487025555F2C1 /* Pods-ETBluetoothPrinterManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ETBluetoothPrinterManager_Example-dummy.m"; sourceTree = "<group>"; };
 		7B0FDF6FF526E04C42E1886469A5CFAA /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		7FDC0FF70DE36C3FC1051E191D554E6E /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		992DEA4C311379CAABBAE1691EAD8594 /* Pods-ETBluetoothPrinterManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ETBluetoothPrinterManager_Example-umbrella.h"; sourceTree = "<group>"; };
 		99EF9B807329E50855E16BA16BE4D6B2 /* Pods-ETBluetoothPrinterManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ETBluetoothPrinterManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9D4B084F91316744A257E1F264BF980A /* Pods-ETBluetoothPrinterManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ETBluetoothPrinterManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,12 +89,12 @@
 		BF9700B2DE120E4263E7A530BB8B5020 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3375A713B1C20B1381845FD2D6007B5 /* ETBluetoothPrinterManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ETBluetoothPrinterManager-prefix.pch"; sourceTree = "<group>"; };
 		C6ABD84DF23EEB9A9B56E2C440ED77F2 /* CBPeripheral+MacAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CBPeripheral+MacAddress.h"; path = "ETBluetoothPrinterManager/Classes/CBPeripheral+MacAddress.h"; sourceTree = "<group>"; };
-		DD71D961CD8E11F9C5517BFCDB6B8F2B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DD71D961CD8E11F9C5517BFCDB6B8F2B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EA7EF56646DB1B2F653740B0FB77850B /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		F1F4F3156F36B0757425FAD1DA39C1A1 /* CBPeripheral+MacAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CBPeripheral+MacAddress.m"; path = "ETBluetoothPrinterManager/Classes/CBPeripheral+MacAddress.m"; sourceTree = "<group>"; };
 		F25B2D052B8E66104A71C07D371BA6F2 /* ETBluetoothPrinterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ETBluetoothPrinterManager.h; path = ETBluetoothPrinterManager/Classes/ETBluetoothPrinterManager.h; sourceTree = "<group>"; };
 		F5F241B1D4C17B8118EBEEAD9CD15348 /* Pods-ETBluetoothPrinterManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ETBluetoothPrinterManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FB55152622EED6A8715FE520C2818144 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB55152622EED6A8715FE520C2818144 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +231,6 @@
 				8CC88E9BB2DAE98E2B831183A06BFB8C /* MBProgressHUD.m */,
 				A16D0C6881DA59948052F438201FD774 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
