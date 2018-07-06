@@ -1,8 +1,6 @@
 # ETBluetoothPrinterManager
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+It can help you discover and connect printer.You also can manage the bluetooth status.
 
 ## Usage
 1.At first, create manager instance.
@@ -17,6 +15,7 @@ self.manager.delegate = self;
 ```
 
 ### Delegate
+Through these delegate methods, you can do something dealing.
 ```
 - (void)bluetoothStatusHasChange:(BOOL)isOn;
 - (void)didDiscoverPeripherals:(NSArray *)peripherals;
@@ -25,7 +24,7 @@ self.manager.delegate = self;
 - (void)didFailConnectPeripheral;
 ```
 ### Recent Peripherals
-You can get the recent paired peripherals in the discovered Peripherals of filtering through filtering.
+You can get the recent matched peripherals in the filtered Peripherals  which discovered.
 ```
 self.pairedDevices = [self.manager recentConnectedPeriplerals:filters];
 ```
@@ -40,7 +39,8 @@ pod 'ETBluetoothPrinterManager'
 ```
 
 ## Requirements
-·iOS 9.0+ 
+·iOS 9.0+
+
 ·Objective-C
 
 ## License
