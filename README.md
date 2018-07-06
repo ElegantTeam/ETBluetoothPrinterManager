@@ -4,7 +4,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-##Usage
+## Usage
 1.At first, create manager instance.
 ```
 self.manager = [ETBluetoothPrinterManager shareInstance];
@@ -16,7 +16,7 @@ implement the proxy in **viewWillAppear** and scan in **bluetoothStatusHasChange
 self.manager.delegate = self;
 ```
 
-###Delegate
+### Delegate
 ```
 - (void)bluetoothStatusHasChange:(BOOL)isOn;
 - (void)didDiscoverPeripherals:(NSArray *)peripherals;
@@ -24,7 +24,7 @@ self.manager.delegate = self;
 - (void)writeValueSuccess;
 - (void)didFailConnectPeripheral;
 ```
-###Recent Peripherals
+### Recent Peripherals
 You can get the recent paired peripherals in the discovered Peripherals of filtering through filtering.
 ```
 self.pairedDevices = [self.manager recentConnectedPeriplerals:filters];
@@ -40,7 +40,7 @@ pod 'ETBluetoothPrinterManager'
 ```
 
 ## Requirements
-·iOS 9.0+
+·iOS 9.0+ 
 ·Objective-C
 
 ## License
