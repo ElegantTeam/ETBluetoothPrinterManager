@@ -10,6 +10,7 @@
 #import "ETBluetoothPrinterManager.h"
 #import "CBPeripheral+MacAddress.h"
 #import "ETBeginPrintController.h"
+#import "MBProgressHUD+ETTool.h"
 
 @interface ETViewController ()<UITableViewDelegate, UITableViewDataSource, ETBluetoothManagerDelegate>
 
@@ -125,12 +126,14 @@ static NSString *cellIdentifier = @"systemCell";
 #pragma mark ACTION
 - (IBAction)useRecentPerpheralPrint:(UIButton *)sender {
     if (!self.manager.isPowerOn) {
+        [MBProgressHUD showText:@"请开启蓝牙"];
         NSLog(@"尚未开启蓝牙，请开启蓝牙");
     }
     
     if ([self.manager everConnected]) {
         [self.manager autoConnectEverPeripheral];
     } else {
+        [MBProgressHUD showText:@"请先连接设备"];
         NSLog(@"运行过程中未连接过设备,请先连接设备。");
     }
 }
